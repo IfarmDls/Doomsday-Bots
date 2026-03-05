@@ -17,105 +17,48 @@
         body { 
             background-color: var(--bg); 
             color: #eeeeee; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', sans-serif; 
             margin: 0; 
-            padding: 0;
+            padding: 20px;
+        }
+        .main-layout {
             display: flex;
             justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
         }
+        /* Side Sections */
+        .side-panel {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        /* Center Content */
         .container { 
-            max-width: 850px; 
-            width: 95%;
-            margin: 40px auto; 
-            padding: 20px; 
-            text-align: center;
+            flex: 2;
+            min-width: 400px;
+            max-width: 800px;
         }
         .hero { 
             background: var(--card); 
-            padding: 40px; 
+            padding: 30px; 
             border-radius: 15px; 
             border: 1px solid #333; 
-            margin-bottom: 30px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            text-align: center;
         }
-        h1 { color: var(--main); margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        h1 { color: var(--main); margin: 0; font-size: 2.2rem; text-transform: uppercase; }
         
-        .mumu-badge { 
-            background: rgba(52, 152, 219, 0.1); 
-            color: var(--mumu); 
-            padding: 10px 20px; 
-            border-radius: 20px; 
-            font-size: 1rem; 
-            border: 1px solid var(--mumu); 
-            display: inline-block; 
-            margin-top: 15px; 
-            font-weight: bold; 
-        }
-
-        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #111; border-radius: 10px; overflow: hidden; border: 1px solid #333; }
-        th { background: #333; color: white; padding: 15px; }
-        td { padding: 15px; border-bottom: 1px solid #222; }
+        /* Table Styling */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #111; border-radius: 10px; overflow: hidden; border: 1px solid #333; }
+        th { background: #333; color: white; padding: 12px; font-size: 0.9rem; }
+        td { padding: 12px; border-bottom: 1px solid #222; font-size: 0.95rem; }
         .price-euro { color: var(--accent); font-weight: bold; }
 
-        .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 25px; flex-wrap: wrap; }
-        
-        .discord-btn { background: var(--discord); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .tele-btn { background: var(--tele); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .dl-btn { background: #444; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-        
-        .discord-btn:hover, .tele-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .info-card { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #222; text-align: left; }
-        .footer { margin-top: 60px; color: #444; font-size: 0.8rem; border-top: 1px solid #222; padding-top: 20px; width: 100%; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div class="hero">
-            <h1>DOOMSDAY FARM BOT</h1>
-            <p style="color: #888;">Ultimate Automation | Professional License</p>
-            
-            <div class="mumu-badge">🖥️ EXCLUSIVELY FOR: MuMu Player 6/12</div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Farm Slots</th>
-                        <th>Price (Euro/UPI)</th>
-                        <th>In-Game Currency</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Up to 5 Farms</td><td class="price-euro">€10 / ₹900</td><td>Equivalent Packs</td></tr>
-                    <tr><td>Up to 10 Farms</td><td class="price-euro">€15 / ₹1350</td><td>Equivalent Packs</td></tr>
-                    <tr><td>Up to 15 Farms</td><td class="price-euro">€20 / ₹1800</td><td>Equivalent Packs</td></tr>
-                </tbody>
-            </table>
-
-            <div class="btn-group">
-                <a href="https://discord.com/users/fra_It" target="_blank" class="discord-btn">👾 DISCORD: fra_It</a>
-                <a href="https://t.me/IfarmDls" target="_blank" class="tele-btn">✈️ TELEGRAM</a>
-                <a href="https://drive.google.com/file/d/1Dt4lxcbLNtj3z06SnXN7hJrTQuXv0Pn_/view?usp=sharing" target="_blank" class="dl-btn">📥 DOWNLOAD</a>
-            </div>
-        </div>
-
-        <div class="info-grid">
-            <div class="info-card" style="border-top: 4px solid var(--mumu);">
-                <h3 style="color: var(--mumu);">⚠️ Important Note</h3>
-                <p style="font-size: 0.9rem; color: #aaa;">This bot is specifically optimized to work <b>ONLY on MuMu Player</b>. Other emulators like LDPlayer or BlueStacks are not supported.</p>
-            </div>
-            <div class="info-card" style="border-top: 4px solid var(--main);">
-                <h3 style="color: var(--main);">🚀 Features</h3>
-                <p style="font-size: 0.9rem; color: #aaa;">Auto-collect resources, human-like behavior, anti-ban protection, and 24/7 farming while you sleep.</p>
-            </div>
-        </div>
-
-        <div class="footer">
-            &copy; 2024 Doomsday Bot Official. All Rights Reserved.
-        </div>
-    </div>
-
-</body>
-</html>
+        /* Buttons */
+        .btn-group { display:
